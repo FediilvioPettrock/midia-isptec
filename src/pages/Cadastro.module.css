@@ -1,0 +1,78 @@
+.Cadastro_container{
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Rigth_div{
+    align-items: center;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.Rigth_div form{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px;
+    width: 90%;
+    height: 80%;
+    margin-top: 10px; 
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.Rigth_div form 
+input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+
+
+.Rigth_div  hr{
+  color: black;
+}
+
+.Container1{
+    display: flex;
+    width: 100%;
+}
+
+.Separador{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.SendButton button[type="submit"] {
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .SendButton{
+    display: flex;
+    height: 10%;
+    width: 100%;
+   flex-direction: column;
+   align-items: center;
+  }
+
+  button[type="submit"]:hover {
+    color: #ffbb33;
+    opacity: 0.9;
+  }
+
+
