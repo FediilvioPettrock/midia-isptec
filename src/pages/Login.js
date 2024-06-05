@@ -1,6 +1,7 @@
 import styles from'./Login.module.css';
 import salao from '../img/salao-beleza.jpg';
 import Linker from '../components/Linker';
+import Navbar from '../components/Navbar';
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 

@@ -9,15 +9,19 @@ function Home(){
 
         <div className={styles.home_container}>
             <Navbar/>
+            <div className=''>
             <section className={styles.container1}>
                 <h1>Bem vindo a <span>ISPmedia</span></h1>
-                <p>Realce sua Beleza, Revele seu Brilho!</p>
-                <LinkButton to="/cadastroprofissional" text="Ver Serviços" color="#222"/>
+                <p>Explore conteúdos multimídia aqui!</p>
+                <div>
+                    <LinkButton className='' to="/cadastro" text="Registar-se" color="#222"/>
+                    <LinkButton to="/login" text="Entrar" color="#222"/>
+                </div>
                 <img src={barbeiro} alt='Karapinha'/>
              </section>
 
              <section className={styles.container2} id="servicos">
-                <h1>Nossos Serviços</h1>
+                <h1>Novos conteúdos</h1>
                 <div className={styles.card_container}>
                    <Card descricao="Some quick example text to build on the 
                    card title and make up the bulk of the card's 
@@ -42,6 +46,7 @@ function Home(){
                 
                 
              </section>
+            </div>
             <Footer/>
         </div>      
     )

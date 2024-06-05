@@ -1,8 +1,10 @@
 import styles from './Cadastro.module.css';
 import Linker from '../components/Linker'
+import Navbar from '../components/Navbar';
 function Cadastro(){
     return(
         <div className={styles.Cadastro_container}>
+        <Navbar/>
 
         <div className={styles.Rigth_div}>
             <h2>Registo</h2>
