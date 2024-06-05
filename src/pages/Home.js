@@ -9,7 +9,6 @@ function Home(){
 
         <div className={styles.home_container}>
             <Navbar/>
-            <div className=''>
             <section className={styles.container1}>
                 <h1>Bem vindo a <span>ISPmedia</span></h1>
                 <p>Explore conteúdos multimídia aqui!</p>
@@ -46,7 +45,6 @@ function Home(){
                 
                 
              </section>
-            </div>
             <Footer/>
         </div>      
     )
