@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import ListPlaylists from '../components/ListPlaylists';
 
 // Estilos para o container principal e colunas
 const AppContainer = styled.div`
@@ -124,6 +125,7 @@ const RightColumn = styled.div`
   display: flex;
   flex-direction: column;
   border: solid #9E9E9E;
+  border-radius: 15px;
 
   @media (max-width: 768px) {
     order: 3;
@@ -138,17 +140,17 @@ const WelcomeMessage = styled.h1`
   color: #F4B400; /* Cabeçalhos e Links Importantes */
 `;
 
-const ContentList = styled.ul`
-  list-style: none;
-  padding: 0;
-`;
+// const ContentList = styled.ul`
+//   list-style: none;
+//   padding: 0;
+// `;
 
-const ContentItem = styled.li`
-  margin-bottom: 10px;
-  padding: 10px;
-  background-color: #9E9E9E; /* Bordas e Linhas Divisórias */
-  color: #000000; /* Texto Principal */
-`;
+// const ContentItem = styled.li`
+//   margin-bottom: 10px;
+//   padding: 10px;
+//   background-color: #9E9E9E; /* Bordas e Linhas Divisórias */
+//   color: #000000; /* Texto Principal */
+// `;
 
 const PrimaryButton = styled.button`
   background-color: #F4B400; /* Botões Primários */
@@ -176,7 +178,8 @@ const SecondaryButton = styled.button`
   }
 `;
 
-const Home = () => {
+
+const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -222,13 +225,8 @@ const Home = () => {
             {/* Aqui você pode adicionar o componente de reprodução multimídia */}
           </CenterColumn>
           <RightColumn>
-            <h2>Destaques</h2>
-            <ContentList>
-              <ContentItem>Video 1</ContentItem>
-              <ContentItem>Video 2</ContentItem>
-              <ContentItem>Video 3</ContentItem>
-              <ContentItem>Video 4</ContentItem>
-            </ContentList>
+            <h2>Playlists</h2>
+            <ListPlaylists />
           </RightColumn>
         </ContentWrapper>
       </HomeContainer>
@@ -236,4 +234,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
