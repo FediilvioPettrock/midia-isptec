@@ -9,12 +9,13 @@ const AppContainer = styled.div`
   flex-direction: column;
   height: 100vh;
   width: 100%;
+  background-color: #FFFFFF; /* Background Principal */
 `;
 
 const Header = styled.header`
-  background-color: #333;
+  background-color: #222; /* Background de Secções */
   padding: 10px;
-  color: white;
+  color: #fff; /* Texto Principal */
 `;
 
 const Navbar = styled.nav`
@@ -40,12 +41,12 @@ const NavItems = styled.div`
 `;
 
 const NavItem = styled(Link)`
-  color: white;
+  color: #F4B400; /* Links e Acentos */
   text-decoration: none;
   margin: 0 10px;
 
   &:hover {
-    text-decoration: underline;
+    color: #F7C546;
   }
 
   @media (max-width: 768px) {
@@ -57,6 +58,7 @@ const MenuIcon = styled.div`
   display: none;
   font-size: 2rem;
   cursor: pointer;
+  color: #F4B400; /* Links e Acentos */
 
   @media (max-width: 768px) {
     display: block;
@@ -70,6 +72,7 @@ const HomeContainer = styled.div`
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
+  background-color: #FFFFFF; /* Background Principal */
 `;
 
 const ContentWrapper = styled.div`
@@ -77,6 +80,7 @@ const ContentWrapper = styled.div`
   width: 100%;
   height: 100%;
   flex-direction: row;
+  border: 10px;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -86,10 +90,11 @@ const ContentWrapper = styled.div`
 const LeftColumn = styled.div`
   flex: 1;
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #BDBDBD; /* Background de Secções */
+  color: #000000; /* Texto Principal */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  border: solid #9E9E9E;
 
   @media (max-width: 768px) {
     order: 2;
@@ -100,11 +105,10 @@ const LeftColumn = styled.div`
 const CenterColumn = styled.div`
   flex: 2;
   padding: 20px;
-  background-color: #fff;
+  background-color: #FFFFFF; /* Background Principal */
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 
   @media (max-width: 768px) {
     order: 1;
@@ -115,10 +119,11 @@ const CenterColumn = styled.div`
 const RightColumn = styled.div`
   flex: 1;
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #BDBDBD; /* Background de Secções */
+  color: #000000; /* Texto Principal */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  border: solid #9E9E9E;
 
   @media (max-width: 768px) {
     order: 3;
@@ -128,7 +133,9 @@ const RightColumn = styled.div`
 
 const WelcomeMessage = styled.h1`
   font-size: 2rem;
+  font-weight: bold;
   margin-bottom: 20px;
+  color: #F4B400; /* Cabeçalhos e Links Importantes */
 `;
 
 const ContentList = styled.ul`
@@ -139,7 +146,34 @@ const ContentList = styled.ul`
 const ContentItem = styled.li`
   margin-bottom: 10px;
   padding: 10px;
-  background-color: #ddd;
+  background-color: #9E9E9E; /* Bordas e Linhas Divisórias */
+  color: #000000; /* Texto Principal */
+`;
+
+const PrimaryButton = styled.button`
+  background-color: #F4B400; /* Botões Primários */
+  color: #000000; /* Texto Principal */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+
+  &:hover {
+    background-color: #F7C546; /* Hover em Botões */
+  }
+`;
+
+const SecondaryButton = styled.button`
+  background-color: #616161; /* Botões Secundários */
+  color: #FFFFFF; /* Texto Branco */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+
+  &:hover {
+    background-color: #F7C546; /* Hover em Botões */
+  }
 `;
 
 const Home = () => {
@@ -150,55 +184,55 @@ const Home = () => {
   };
 
   return (
-  
-      <AppContainer>
-        <Header>
-          <Navbar>
-            <div>
-              <NavItem to="/">Home</NavItem>
-            </div>
-            <MenuIcon onClick={toggleMenu}>
-              {isOpen ? <FaTimes /> : <FaBars />}
-            </MenuIcon>
-            <NavItems isOpen={isOpen}>
-              <NavItem to="/profile">Profile</NavItem>
-              <NavItem to="/settings">Settings</NavItem>
-              <NavItem to="/login">Login</NavItem>
-              <NavItem to="/logout">Logout</NavItem>
-            </NavItems>
-          </Navbar>
-        </Header>
-        <HomeContainer>
-          <ContentWrapper>
-            <LeftColumn>
-              <h2>Navigation</h2>
-              <nav>
-                <ul>
-                  <li><NavItem to="/">Home</NavItem></li>
-                  <li><NavItem to="/profile">Profile</NavItem></li>
-                  <li><NavItem to="/settings">Settings</NavItem></li>
-                  <li><NavItem to="/logout">Logout</NavItem></li>
-                </ul>
-              </nav>
-            </LeftColumn>
-            <CenterColumn>
-              <WelcomeMessage>Welcome to the Media Player App</WelcomeMessage>
-              <p>Here you can play your favorite multimedia content!</p>
-              {/* Aqui você pode adicionar o componente de reprodução multimídia */}
-            </CenterColumn>
-            <RightColumn>
-              <h2>Featured Content</h2>
-              <ContentList>
-                <ContentItem>Video 1</ContentItem>
-                <ContentItem>Video 2</ContentItem>
-                <ContentItem>Video 3</ContentItem>
-                <ContentItem>Video 4</ContentItem>
-              </ContentList>
-            </RightColumn>
-          </ContentWrapper>
-        </HomeContainer>
-      </AppContainer>
-    
+    <AppContainer>
+      <Header>
+        <Navbar>
+          <div>
+            <NavItem to="/">IMP</NavItem>
+          </div>
+          <MenuIcon onClick={toggleMenu}>
+            {isOpen ? <FaTimes /> : <FaBars />}
+          </MenuIcon>
+          <NavItems isOpen={isOpen}>
+            <NavItem to="/profile">Profile</NavItem>
+            <NavItem to="/settings">Settings</NavItem>
+            <NavItem to="/login">Login</NavItem>
+            <NavItem to="/logout">Logout</NavItem>
+          </NavItems>
+        </Navbar>
+      </Header>
+      <HomeContainer>
+        <ContentWrapper>
+          <LeftColumn>
+            <h2>Navigation</h2>
+            <nav>
+              <ul>
+                <li><NavItem to="/">IMP</NavItem></li>
+                <li><NavItem to="/profile">Profile</NavItem></li>
+                <li><NavItem to="/settings">Settings</NavItem></li>
+                <li><NavItem to="/logout">Logout</NavItem></li>
+              </ul>
+            </nav>
+          </LeftColumn>
+          <CenterColumn>
+            <WelcomeMessage>Bem-vindo a <span>ISP Media Player</span></WelcomeMessage>
+            <p>Here you can play your favorite multimedia content!</p>
+            <PrimaryButton>Primary Action</PrimaryButton>
+            <SecondaryButton>Secondary Action</SecondaryButton>
+            {/* Aqui você pode adicionar o componente de reprodução multimídia */}
+          </CenterColumn>
+          <RightColumn>
+            <h2>Destaques</h2>
+            <ContentList>
+              <ContentItem>Video 1</ContentItem>
+              <ContentItem>Video 2</ContentItem>
+              <ContentItem>Video 3</ContentItem>
+              <ContentItem>Video 4</ContentItem>
+            </ContentList>
+          </RightColumn>
+        </ContentWrapper>
+      </HomeContainer>
+    </AppContainer>
   );
 };
 
