@@ -5,7 +5,6 @@ import barbeiro from '../img/barbeiro.png';
 const PlaylistContainer = styled.div`
   display: flex;
   flex-direction: column;
-  
 `;
 
 const PlaylistItem = styled(Link)`

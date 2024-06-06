@@ -126,7 +126,15 @@ const RightColumn = styled.div`
   flex-direction: column;
   border: solid #9E9E9E;
   border-radius: 15px;
+  overflow-y: auto; /* Habilita a rolagem vertical */
+  max-height: 85vh; /* Limita a altura ao tamanho da coluna pai */
 
+  ::-webkit-scrollbar-thumb {
+    background-color: blue;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid orange;  /* creates padding around scroll thumb */
+  }
+  
   @media (max-width: 768px) {
     order: 3;
     padding: 10px;
