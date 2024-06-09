@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import ListPlaylists from '../components/ListPlaylists';
+import LinkButton from '../components/LinkButton';
 
 // Estilos para o container principal e colunas
 const AppContainer = styled.div`
@@ -15,7 +16,7 @@ const AppContainer = styled.div`
 
 const Header = styled.header`
   background-color: #222; /* Background de Secções */
-  padding: 10px;
+
   color: #fff; /* Texto Principal */
 `;
 
@@ -33,6 +34,7 @@ const Navbar = styled.nav`
 const NavItems = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -42,7 +44,7 @@ const NavItems = styled.div`
 `;
 
 const NavItem = styled(Link)`
-  color: #F4B400; /* Links e Acentos */
+  color: white; /* Links e Acentos */
   text-decoration: none;
   margin: 0 10px;
 
@@ -59,10 +61,13 @@ const MenuIcon = styled.div`
   display: none;
   font-size: 2rem;
   cursor: pointer;
-  color: #F4B400; /* Links e Acentos */
 
   @media (max-width: 768px) {
     display: block;
+  }
+
+  &:hover {
+    color: #F7C546;
   }
 `;
 
@@ -95,8 +100,15 @@ const LeftColumn = styled.div`
   color: #000000; /* Texto Principal */
   display: flex;
   flex-direction: column;
-  border: solid #9E9E9E;
+  border: solid 8px #BDBDBD;
+  box-shadow: 1px 1px 3px #444;
+  border-radius: 10px;
+  overflow-y: auto; /* Habilita a rolagem vertical */
+  max-height: 85vh; /* Limita a altura ao tamanho da coluna pai */
 
+  scrollbar-width: thin; /* "auto" ou "thin" */
+  scrollbar-color: black #BDBDBD;
+  
   @media (max-width: 768px) {
     order: 2;
     padding: 10px;
@@ -124,16 +136,14 @@ const RightColumn = styled.div`
   color: #000000; /* Texto Principal */
   display: flex;
   flex-direction: column;
-  border: solid #9E9E9E;
+  border: solid 8px #BDBDBD;
+  box-shadow: 1px 1px 3px #444;
   border-radius: 15px;
   overflow-y: auto; /* Habilita a rolagem vertical */
   max-height: 85vh; /* Limita a altura ao tamanho da coluna pai */
 
-  ::-webkit-scrollbar-thumb {
-    background-color: blue;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 3px solid orange;  /* creates padding around scroll thumb */
-  }
+  scrollbar-width: thin; /* "auto" ou "thin" */
+  scrollbar-color: black #BDBDBD;
   
   @media (max-width: 768px) {
     order: 3;
@@ -206,9 +216,9 @@ const HomePage = () => {
           </MenuIcon>
           <NavItems isOpen={isOpen}>
             <NavItem to="/profile">Profile</NavItem>
+            <NavItem to="/settings">Playlists</NavItem>
             <NavItem to="/settings">Settings</NavItem>
-            <NavItem to="/login">Login</NavItem>
-            <NavItem to="/logout">Logout</NavItem>
+            <LinkButton to="/login" text="Entrar" color="#F4B400"/>
           </NavItems>
         </Navbar>
       </Header>
