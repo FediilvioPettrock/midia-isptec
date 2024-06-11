@@ -104,6 +104,7 @@ const LeftColumn = styled.div`
   flex-direction: column;
   border: solid 8px #BDBDBD;
   box-shadow: 1px 1px 5px #BDBDBD;
+  max-height: 85vh;
   border-radius: 15px;
   align-items: center;
   font-size: 1.1em;
