@@ -1,0 +1,15 @@
+.left_navbar {
+    background-color: #222;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.left_navbar > ul {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    margin: 0;
+    padding: 0;
+}

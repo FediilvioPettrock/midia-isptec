@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import styles from './HomePage.css';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import ListPlaylists from '../components/ListPlaylists';
 import LinkButton from '../components/LinkButton';
+
 
 // Estilos para o container principal e colunas
 const AppContainer = styled.div`
@@ -74,7 +76,7 @@ const MenuIcon = styled.div`
 const HomeContainer = styled.div`
   display: flex;
   flex: 1;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
@@ -97,20 +99,17 @@ const LeftColumn = styled.div`
   flex: 1;
   padding: 20px;
   background-color: #BDBDBD; /* Background de Secções */
-  color: #000000; /* Texto Principal */
+  color: 000; /* Texto Principal */
   display: flex;
   flex-direction: column;
   border: solid 8px #BDBDBD;
-  box-shadow: 1px 1px 3px #444;
-  border-radius: 10px;
-  overflow-y: auto; /* Habilita a rolagem vertical */
-  max-height: 85vh; /* Limita a altura ao tamanho da coluna pai */
-
-  scrollbar-width: thin; /* "auto" ou "thin" */
-  scrollbar-color: black #BDBDBD;
+  box-shadow: 1px 1px 5px #BDBDBD;
+  border-radius: 15px;
+  align-items: center;
+  font-size: 1.1em;
   
   @media (max-width: 768px) {
-    order: 2;
+    order: 3;
     padding: 10px;
   }
 `;
@@ -137,7 +136,7 @@ const RightColumn = styled.div`
   display: flex;
   flex-direction: column;
   border: solid 8px #BDBDBD;
-  box-shadow: 1px 1px 3px #444;
+  box-shadow: 1px 1px 5px #BDBDBD;
   border-radius: 15px;
   overflow-y: auto; /* Habilita a rolagem vertical */
   max-height: 85vh; /* Limita a altura ao tamanho da coluna pai */
@@ -225,21 +224,33 @@ const HomePage = () => {
       <HomeContainer>
         <ContentWrapper>
           <LeftColumn>
-            <h2>Navigation</h2>
-            <nav>
+            <nav className='left_navbar'>
               <ul>
-                <li><NavItem to="/">IMP</NavItem></li>
-                <li><NavItem to="/profile">Profile</NavItem></li>
-                <li><NavItem to="/settings">Settings</NavItem></li>
-                <li><NavItem to="/logout">Logout</NavItem></li>
+                <li><NavItem to="/">Criar grupo</NavItem></li>
+                <li><NavItem to="/">Meus grupo</NavItem></li>
+                <li><NavItem to="/profile">Playlist</NavItem></li>
               </ul>
             </nav>
+            <nav className='left_navbar'>
+              <ul>
+                <li><NavItem to="/">Partilhar</NavItem></li>
+                <li><NavItem to="/settings">Explorar</NavItem></li>
+              </ul>
+            </nav>
+            <nav className='left_navbar'>
+              <ul>
+                <li><NavItem to="/">Meu perfil</NavItem></li>
+                <li><NavItem to="/profile">Definições</NavItem></li>
+                <li><NavItem to="/settings">Sair</NavItem></li>
+              </ul>
+            </nav>
+
           </LeftColumn>
           <CenterColumn>
             <WelcomeMessage>Bem-vindo a <span>ISP Media Player</span></WelcomeMessage>
-            <p>Here you can play your favorite multimedia content!</p>
-            <PrimaryButton>Primary Action</PrimaryButton>
-            <SecondaryButton>Secondary Action</SecondaryButton>
+            <p>O seu local predileto de assistir, ouvir e ler!</p>
+            <PrimaryButton>Entrar</PrimaryButton>
+            <SecondaryButton>Criar nova conta</SecondaryButton>
             {/* Aqui você pode adicionar o componente de reprodução multimídia */}
           </CenterColumn>
           <RightColumn>
