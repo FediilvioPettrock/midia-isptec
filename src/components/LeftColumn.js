@@ -10,6 +10,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { RiLogoutCircleLine } from "react-icons/ri";
 import { RiUserAddLine } from "react-icons/ri";
 import { RiPlayList2Line } from "react-icons/ri";
+import { MdOutlineRadio } from "react-icons/md";
 
 const LeftColumn = () => {
     const leftNavItems1 = [
@@ -30,6 +31,10 @@ const LeftColumn = () => {
         {
             text: 'Playlists',
             icon: <RiPlayList2Line />,
+        },
+        {
+            text: 'Listen to radio',
+            icon: <MdOutlineRadio />,
         },
         {
             text: 'Share',
