@@ -8,6 +8,7 @@ import { LuShare2 } from "react-icons/lu";
 import { CgProfile } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
 import { RiLogoutCircleLine } from "react-icons/ri";
+import { RiUserAddLine } from "react-icons/ri";
 
 const LeftColumn = () => {
     const leftNavItems1 = [
@@ -18,6 +19,10 @@ const LeftColumn = () => {
         {
             text: 'Create new group',
             icon: <GrGroup />,
+        },
+        {
+            text: 'Add user',
+            icon: <RiUserAddLine />,
         }
     ];
     const leftNavItems2 = [
