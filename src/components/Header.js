@@ -24,7 +24,7 @@ const Header = () => {
           <NavItem to="/profile">Profile</NavItem>
           <NavItem to="/settings">Playlists</NavItem>
           <NavItem to="/settings">Settings</NavItem>
-          <LinkButton to="/login" text="Entrar" color="#F4B400" />
+          <LinkButton to="/login" text="Log in" color="#F4B400" />
         </NavItems>
       </Navbar>
     </StyledHeader>

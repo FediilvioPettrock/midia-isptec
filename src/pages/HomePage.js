@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import LeftColumn from '../components/LeftColumn';
 import CenterColumn from '../components/CenterColumn';
 import RightColumn from '../components/RightColumn';
+import Footer from '../components/Footer';
 import { ContentWrapper, HomeContainer } from '../styles/HomePageStyles';
 
 const HomePage = () => {
@@ -17,6 +18,7 @@ const HomePage = () => {
           <RightColumn />
         </ContentWrapper>
       </HomeContainer>
+      <Footer />
     </AppContainer>
   );
 };

@@ -3,18 +3,22 @@ import styles from '../styles/LeftNavbar.module.css';
 import { NavItem } from '../styles/Navbar';
 
 
-const LeftNav = () => {
+const LeftNavbar = ({ items }) => {
     return (
         <nav className={ styles.left_navbar }>
             <ul>
-                <li><NavItem to="/">Criar grupo</NavItem></li>
-                <li><NavItem to="/">Meus grupos</NavItem></li>
-                <li><NavItem to="/profile">Playlist</NavItem></li>
+                {items.map((item) => (
+                    <li>
+                    <NavItem to="/">
+                        { item.icon }
+                        { ' ' + item.text }
+                    </NavItem>  
+                    </li>
+                ))}
             </ul>
         </nav>
-
     );
 
 };
 
-export default LeftNav;
+export default LeftNavbar;

@@ -4,6 +4,7 @@ import Linker from '../components/Linker';
 import Navbar from '../components/Navbar';
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import { login } from '../server/authentication';
 
   function Login() {
     const [email, setUserEmail] = useState('');
@@ -11,14 +12,19 @@ import { useNavigate } from "react-router-dom";
     const [categoria, setCategoria] = useState('Administrador'); // Adicionando categoria ao estado
     const navigate = useNavigate();
 
-    const handleLogin = (event) => {
+    const handleLogin = async (event) => {
         event.preventDefault();
-        console.log('Login attempt with:', { email, password, categoria });
-
-        if (categoria === "Cliente") {
-            localStorage.setItem("authenticated", true);
+        try {
+            const data = await login (email, password);
+            console.log(data);
             navigate("/userpage", { replace: true });
+        } catch (error) {
+            console.error(error);
         }
+        // if (categoria === "Cliente") {
+        //     localStorage.setItem("authenticated", true);
+        //     navigate("/userpage", { replace: true });
+        // }
     };
 
     return (

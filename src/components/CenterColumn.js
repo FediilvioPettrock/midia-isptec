@@ -6,10 +6,10 @@ import SecondaryButton from './SecondaryButton';
 const CenterColumn = () => {
   return (
     <StyledCenterColumn>
-      <WelcomeMessage>Bem-vindo ao <span>ISP Media Player</span></WelcomeMessage>
-      <p>O seu local predileto de assistir, ouvir e ler!</p>
-      <PrimaryButton>Entrar</PrimaryButton>
-      <SecondaryButton>Criar nova conta</SecondaryButton>
+      <WelcomeMessage>Welcome to <span>ISP Media Player</span></WelcomeMessage>
+      <p>Your favorite place to watch, listen and read!</p>
+      <PrimaryButton>Log in</PrimaryButton>
+      <SecondaryButton>Create an account</SecondaryButton>
     </StyledCenterColumn>
   );
 };
