@@ -7,6 +7,7 @@ const PrimaryButton = styled.button`
   padding: 10px 20px;
   cursor: pointer;
   margin: 10px;
+  border-radius: 5px;
 
   &:hover {
     background-color: #F7C546; /* Hover em Botões */

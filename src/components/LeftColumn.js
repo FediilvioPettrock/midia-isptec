@@ -9,6 +9,7 @@ import { CgProfile } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
 import { RiLogoutCircleLine } from "react-icons/ri";
 import { RiUserAddLine } from "react-icons/ri";
+import { RiPlayList2Line } from "react-icons/ri";
 
 const LeftColumn = () => {
     const leftNavItems1 = [
@@ -26,6 +27,10 @@ const LeftColumn = () => {
         }
     ];
     const leftNavItems2 = [
+        {
+            text: 'Playlists',
+            icon: <RiPlayList2Line />,
+        },
         {
             text: 'Share',
             icon: <LuShare2 />,
