@@ -1,14 +1,14 @@
 .btn{
-    border-radius: 2px;
+    border-radius: 3px;
     color: #000;
     padding: 0.5em 1em;
     text-decoration: none;
-    transition: 0.3s;
+    transition: 0.2s;
     margin: 10px;
 
 }
 .btn:hover {
     color: white;
-    opacity: 0.9;
+    opacity: 0.8;
     background-color: #000;
 }

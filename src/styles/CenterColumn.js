@@ -14,7 +14,7 @@ export const CenterColumn = styled.div`
   }
 `;
 
-export const WelcomeMessage = styled.h1`
+export const PageTitle = styled.h1`
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 20px;

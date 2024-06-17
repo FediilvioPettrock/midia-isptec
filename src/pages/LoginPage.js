@@ -5,8 +5,8 @@ import Navbar from '../components/Navbar';
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { login } from '../server/authentication';
-
-  function Login() {
+import { PageTitle } from '../styles/CenterColumn';
+  function LoginPage() {
     const [email, setUserEmail] = useState('');
     const [password, setPassword] = useState('');
     const [categoria, setCategoria] = useState('Administrador'); // Adicionando categoria ao estado
@@ -33,7 +33,7 @@ import { login } from '../server/authentication';
                 <img src={salao} alt='Salao'/>
             </div>
             <div className={styles.Rigth_div}>
-                <h2>Login</h2>
+                <PageTitle>Log into your account</PageTitle>
 
                 <form onSubmit={handleLogin}>
                     <label htmlFor="email">Email</label>
@@ -65,15 +65,15 @@ import { login } from '../server/authentication';
                         <option value="Administrativo">Administrativo</option>
                     </select>
 
-                    <button type="submit">Entrar</button>
+                    <button type="submit">Login</button>
 
                     <hr/>
                 </form>
-                <Linker rota="/cadastro" message="Ainda não Possui uma conta?"/>
+                <Linker route="/register" message="Create an account"/>
             </div>
         </div>
     );
 }
 
 
-export default Login
+export default LoginPage
