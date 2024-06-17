@@ -1,6 +1,8 @@
 import styles from './Cadastro.module.css';
 import Linker from '../components/Linker'
 function Cadastro(){
+
+    
     return(
         <div className={styles.Cadastro_container}>
 
