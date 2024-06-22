@@ -8,7 +8,7 @@ const CenterColumn = () => {
       <PageTitle>Welcome to <span>ISP Media Player</span></PageTitle>
       <p>Your favorite place to watch, listen and read!</p>
       <LinkButton to="/login" text="Log in" color="#F4B400" />
-      <LinkButton to="/register" text="Create new account" color="#616161" />
+      <LinkButton to="/register" text="Create new account" color="#029b16" />
     </StyledCenterColumn>
   );
 };
