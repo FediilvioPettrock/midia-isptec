@@ -1,0 +1,72 @@
+/* src/components/Player.css */
+.player-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    background: black;
+    color: white;
+    &:hover {
+      .controls {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .player {
+    width: 100%;
+    position: relative;
+  }
+  
+  .player-media {
+    width: 100%;
+    height: auto;
+  }
+  
+  .controls {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .progress-space {
+    background-color: red;
+  }
+  .progress-space > .progress-item {
+    background: black;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .controls-space {
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    margin-top: 2px;
+    text-align: left;
+    align-items: left;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  input[type="range"] {
+    
+  }
+  
