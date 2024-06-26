@@ -106,7 +106,7 @@
 
 .menu_item {
   height: 57px;
-  width: 16em;
+  width: 14em;
   display: flex;
   color: #efefef;
   text-decoration: none;
@@ -125,6 +125,7 @@
   margin: auto 12px;
   width: 30%;
   justify-content: center;
+  
 }
 
 .menu_item p {
