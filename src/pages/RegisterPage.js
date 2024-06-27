@@ -4,18 +4,17 @@ import Header from '../components/Header';
 import LeftColumn from '../components/LeftColumn';
 import CenterColumn from '../components/CenterColumn';
 import RightColumn from '../components/RightColumn';
+import RegisterForm from '../components/RegisterForm'
 import Footer from '../components/Footer';
 import { ContentWrapper, HomeContainer } from '../styles/HomePageStyles';
 
-const HomePage = () => {
+const RegisterPage = () => {
   return (
     <AppContainer>
       <Header />
       <HomeContainer>
         <ContentWrapper>
-          <LeftColumn />
-          <CenterColumn />
-          <RightColumn />
+          <RegisterForm />
         </ContentWrapper>
       </HomeContainer>
       <Footer />
@@ -23,4 +22,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default RegisterPage;

@@ -1,15 +1,14 @@
 import React from 'react';
-import { CenterColumn as StyledCenterColumn, WelcomeMessage } from '../styles/CenterColumn';
-import PrimaryButton from './PrimaryButton';
-import SecondaryButton from './SecondaryButton';
+import { CenterColumn as StyledCenterColumn, PageTitle } from '../styles/CenterColumn';
+import LinkButton from './LinkButton';
 
 const CenterColumn = () => {
   return (
     <StyledCenterColumn>
-      <WelcomeMessage>Welcome to <span>ISP Media Player</span></WelcomeMessage>
+      <PageTitle>Welcome to <span>ISP Media Player</span></PageTitle>
       <p>Your favorite place to watch, listen and read!</p>
-      <PrimaryButton>Log in</PrimaryButton>
-      <SecondaryButton>Create an account</SecondaryButton>
+      <LinkButton to="/login" text="Log in" color="#F4B400" />
+      <LinkButton to="/register" text="Create new account" color="#029b16" />
     </StyledCenterColumn>
   );
 };
