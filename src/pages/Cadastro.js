@@ -5,6 +5,14 @@ import { useNavigate } from "react-router-dom";
 import { register } from "../server/authentication";
 import { useState } from "react";
 
+import styles from './Cadastro.module.css';
+import Linker from '../components/Linker'
+function Cadastro(){
+
+    
+    return(
+        <div className={styles.Cadastro_container}>
+
 function Cadastro() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

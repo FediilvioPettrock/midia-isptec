@@ -6,11 +6,20 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { login } from "../server/authentication";
 
+
 function Login() {
   const [email, setUserEmail] = useState("");
   const [password, setPassword] = useState("");
   const [categoria, setCategoria] = useState("Administrador"); // Adicionando categoria ao estado
   const navigate = useNavigate();
+
+
+  function Login() {
+    const [email, setUserEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [categoria, setCategoria] = useState('Administrador'); // Adicionando categoria ao estado
+    const navigate = useNavigate();
+
 
   const handleLogin = async (event) => {
     event.preventDefault();
