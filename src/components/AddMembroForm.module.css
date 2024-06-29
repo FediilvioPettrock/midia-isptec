@@ -1,0 +1,70 @@
+.minhadiv{
+    padding: 20px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 20%; 
+    left: 35%;
+    width: 40%;
+    height: 400px;
+    background-color: #121111;
+    border-radius: 4px;
+    align-items: center;
+    color: white;
+    justify-content: space-around;
+}
+
+form{
+   
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.titlediv{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.minhadiv input{
+    height: 35px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+
+.minhadiv label{
+    font-weight: bold;
+}
+
+.options{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    
+    align-items: center;
+}
+
+.options button{
+    width: 90px;
+    height: 40px; 
+    border-radius: 8px;
+    color: white;
+   
+}
+
+button[type="submit"]{
+    background-color: green;
+}
+.cancel{
+    background-color: #ff0000;
+    width: 90px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+}
+
+.privacidade{
+    width: 100%;
+}

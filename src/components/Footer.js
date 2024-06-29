@@ -1,5 +1,5 @@
 import {FaFacebook, FaInstagram, FaLinkedin} from 'react-icons/fa'
-import styles from './Footer.module.css'
+import styles from '../styles/Footer.module.css'
 function Footer(){
  return(
     <footer className={styles.footer}>
@@ -8,7 +8,7 @@ function Footer(){
          <li><FaInstagram/></li>
          <li><FaLinkedin/></li>
       </ul>
-      <p className={styles.copy_right}><span>Karapinha</span> &copy; 2024</p>
+      <p className={styles.copy_right}><span>ISPMedia</span> &copy; 2024</p>
     </footer>     
  )
 }

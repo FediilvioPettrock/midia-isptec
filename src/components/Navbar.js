@@ -13,11 +13,11 @@ function Navbar(){
        </Link>
        <ul className={styles.list}>
             <li className={styles.item}> <Link to="/">Home</Link> </li>
-            <li className={styles.item}> <Link to="/company">Empresa</Link></li>
-            <li className={styles.item}><a href="#servicos">Serviços</a></li>
+            <li className={styles.item}> <Link to="/company">Listas de reprodução</Link></li>
+            <li className={styles.item}><a href="#servicos">Explorar</a></li>
             <li className={styles.item}> <Link to="/contact">Contactos</Link> </li>
-            <li className={styles.cadastro}> <Link to="/cadastro">Cadastrar</Link></li>
-            <li><LinkButton to="/login" text="Login" color="#222"/></li>
+            {/*<li className={styles.cadastro}> <Link to="/cadastro">Cadastrar</Link></li>*/}
+            <li><LinkButton to="/login" text="Entrar" color="#222"/></li>
 
        </ul>
       </Container>  
