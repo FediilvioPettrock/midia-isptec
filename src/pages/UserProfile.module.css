@@ -1,0 +1,76 @@
+.body_container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.721);
+  width: 100%;
+}
+
+.userbody {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.691);
+    height: 44.31vw;
+  }
+  
+  .usernav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+  }
+  
+  .title {
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    color: white;
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+  
+  
+  .search {
+    display: flex;
+    width: 40%;
+    height: 35px;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  .search_bar {
+    width: 90%;
+    height: 100%;
+    border-radius: 15px;
+    border-width: 1px;
+    border-color: #efefef53;
+    background-color: rgba(128, 128, 128, 0.186);
+    color: white;
+    padding-left: 20px;
+    margin-right: 5px;
+  }
+  
+  .search_button {
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    border-width: 1px;
+    border-color: #efefef53;
+    background-color: rgba(128, 128, 128, 0.186);
+    color: #efefef;
+  }
+  
+  .album_list {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 30px;
+    overflow-y: auto;
+    width: 100%;
+    transition: 0.4s;
+  }
+  
+  .album_list_NX {
+      grid-template-columns: repeat(3, 1fr); 
+      transition: 0.4s;
+  }
+  
